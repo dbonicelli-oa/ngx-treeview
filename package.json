@@ -31,10 +31,10 @@
   "author": "Leo Vo <leovo2708@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leovo2708/ngx-treeview.git"
+    "url": "git+https://github.com/dbonicelli-oa/ngx-treeview.git"
   },
   "bugs": {
-    "url": "https://github.com/leovo2708/ngx-treeview/issues"
+    "url": "https://github.com/dbonicelli-oa/ngx-treeview/issues"
   },
   "dependencies": {
     "@angular/animations": "11.2.14",
