@@ -29,6 +29,10 @@
             <label class="form-check-label" for="hasFilter"> hasFilter</label>
           </div>
           <div class="form-check">
+            <input type="checkbox" class="form-check-input" [(ngModel)]="config.filterHidden" id="filterHidden">
+            <label class="form-check-label" for="filterHidden"> filterHidden</label>
+          </div>
+          <div class="form-check">
             <input type="checkbox" class="form-check-input" [(ngModel)]="config.hasCollapseExpand"
               id="hasCollapseExpand">
             <label class="form-check-label" for="hasCollapseExpand">hasCollapseExpand</label>

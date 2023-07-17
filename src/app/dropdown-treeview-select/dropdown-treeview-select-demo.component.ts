@@ -14,7 +14,8 @@ export class DropdownTreeviewSelectDemoComponent implements OnInit {
   items: TreeviewItem[];
   config = TreeviewConfig.create({
     hasFilter: true,
-    hasCollapseExpand: true
+    hasCollapseExpand: true,
+    filterHidden: true
   });
 
   constructor(

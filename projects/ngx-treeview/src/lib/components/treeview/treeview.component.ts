@@ -16,6 +16,7 @@ class FilterTreeviewItem extends TreeviewItem {
       value: item.value,
       disabled: item.disabled,
       checked: item.checked,
+      hidden: item.hidden,
       collapsed: item.collapsed,
       children: item.children
     });
@@ -57,6 +58,7 @@ export class TreeviewComponent implements OnChanges, OnInit {
   headerTemplateContext: TreeviewHeaderTemplateContext;
   allItem: TreeviewItem;
   filterText = '';
+  showHidden = false;
   filterItems: TreeviewItem[];
   selection: TreeviewSelection;
 
@@ -102,6 +104,12 @@ export class TreeviewComponent implements OnChanges, OnInit {
     this.updateFilterItems();
   }
 
+  onFilterShowHiddenChange(showHidden: boolean): void {
+    this.showHidden = showHidden;
+    this.filterChange.emit(`${showHidden}`);
+    this.updateFilterItems();
+  }
+
   onAllCheckedChange(): void {
     const checked = this.allItem.checked;
     this.filterItems.forEach(item => {
@@ -137,7 +145,8 @@ export class TreeviewComponent implements OnChanges, OnInit {
       item: this.allItem,
       onCheckedChange: () => this.onAllCheckedChange(),
       onCollapseExpand: () => this.onAllCollapseExpand(),
-      onFilterTextChange: (text) => this.onFilterTextChange(text)
+      onFilterTextChange: (text) => this.onFilterTextChange(text),
+      onFilterShowHiddenChange: (showHidden) => this.onFilterShowHiddenChange(showHidden)
     };
   }
 
@@ -163,15 +172,63 @@ export class TreeviewComponent implements OnChanges, OnInit {
       this.items.forEach(item => {
         const newItem = this.filterItem(item, filterText);
         if (!isNil(newItem)) {
-          filterItems.push(newItem);
+          if (this.config.filterHidden) {
+            const filteredHiddenItem = this.filterItemHidden(newItem, this.showHidden);
+
+            if (!isNil(filteredHiddenItem)) {
+              filterItems.push(filteredHiddenItem);
+            }
+          } else {
+            filterItems.push(newItem);
+          }
         }
       });
       this.filterItems = filterItems;
     } else {
-      this.filterItems = this.items;
+      const filterItems: TreeviewItem[] = [];
+      this.items.forEach(item => {
+        const newItem = this.filterItemHidden(item, this.showHidden);
+        if (!isNil(newItem)) {
+          filterItems.push(newItem);
+        }
+      });
+      this.filterItems = filterItems;
     }
 
     this.updateCheckedOfAll();
+  }
+
+  private filterItemHidden(item: TreeviewItem, showHidden: boolean) {
+    if (!showHidden && this.config.filterHidden) {
+      if (item.hidden) {
+        return undefined;
+      } else {
+        if (!isNil(item.children)) {
+          const children: TreeviewItem[] = [];
+          item.children.forEach(child => {
+            const newChild = this.filterItemHidden(child, showHidden);
+            if (!isNil(newChild)) {
+              children.push(newChild);
+            }
+          });
+          if (children.length > 0) {
+            const newItem = new FilterTreeviewItem(item);
+            newItem.collapsed = false;
+            newItem.children = children;
+            return newItem;
+          } else {
+            const newItem = new FilterTreeviewItem(item);
+            newItem.collapsed = false;
+            newItem.children = [];
+            return newItem;
+          }
+        }
+      }
+    } else {
+      return item;
+    }
+
+    return item;
   }
 
   private filterItem(item: TreeviewItem, filterText: string): TreeviewItem {
