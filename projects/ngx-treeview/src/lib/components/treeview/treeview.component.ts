@@ -107,6 +107,7 @@ export class TreeviewComponent implements OnChanges, OnInit {
   onFilterShowHiddenChange(showHidden: boolean): void {
     this.showHidden = showHidden;
     this.filterChange.emit(`${showHidden}`);
+    this.filterText = '';
     this.updateFilterItems();
   }
 
@@ -217,9 +218,16 @@ export class TreeviewComponent implements OnChanges, OnInit {
             newItem.children = children;
             return newItem;
           } else {
-            const newItem = new FilterTreeviewItem(item);
+            const newItem = new FilterTreeviewItem(new TreeviewItem({
+              text: item.text,
+              value: item.value,
+              disabled: item.disabled,
+              checked: item.checked,
+              hidden: item.hidden,
+              collapsed: item.collapsed,
+              children: []
+            }));
             newItem.collapsed = false;
-            newItem.children = [];
             return newItem;
           }
         }
@@ -233,10 +241,10 @@ export class TreeviewComponent implements OnChanges, OnInit {
 
   private filterItem(item: TreeviewItem, filterText: string): TreeviewItem {
     const isMatch = includes(item.text.toLowerCase(), filterText);
-    if (isMatch) {
+    if (isMatch && (this.showHidden || (!this.showHidden && !item.hidden))) {
       return item;
     } else {
-      if (!isNil(item.children)) {
+      if (!isNil(item.children) && ((!this.showHidden && !item.hidden) || this.showHidden)) {
         const children: TreeviewItem[] = [];
         item.children.forEach(child => {
           const newChild = this.filterItem(child, filterText);
