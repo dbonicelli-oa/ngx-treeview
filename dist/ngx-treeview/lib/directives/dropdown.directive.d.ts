@@ -1,4 +1,5 @@
 import { EventEmitter } from '@angular/core';
+import * as i0 from "@angular/core";
 export declare class DropdownDirective {
     toggleElement: any;
     internalOpen: boolean;
@@ -10,4 +11,6 @@ export declare class DropdownDirective {
     close(): void;
     toggle(): void;
     private isEventFromToggle;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DropdownDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<DropdownDirective, "[ngxDropdown]", ["ngxDropdown"], { "internalOpen": { "alias": "open"; "required": false; }; }, { "openChange": "openChange"; }, never, never, false, never>;
 }

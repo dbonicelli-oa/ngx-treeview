@@ -1,3 +1,4 @@
+import * as i0 from "@angular/core";
 export declare class TreeviewConfig {
     hasAllCheckBox: boolean;
     hasFilter: boolean;
@@ -14,4 +15,6 @@ export declare class TreeviewConfig {
         filterHidden?: boolean;
         maxHeight?: number;
     }): TreeviewConfig;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeviewConfig, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<TreeviewConfig>;
 }

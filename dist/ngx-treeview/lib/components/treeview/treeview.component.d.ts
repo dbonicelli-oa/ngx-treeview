@@ -5,6 +5,7 @@ import { TreeviewConfig } from '../../models/treeview-config';
 import { TreeviewHeaderTemplateContext } from '../../models/treeview-header-template-context';
 import { TreeviewItemTemplateContext } from '../../models/treeview-item-template-context';
 import { TreeviewEventParser } from '../../helpers/treeview-event-parser';
+import * as i0 from "@angular/core";
 export declare class TreeviewComponent implements OnChanges, OnInit {
     i18n: TreeviewI18n;
     private defaultConfig;
@@ -39,4 +40,6 @@ export declare class TreeviewComponent implements OnChanges, OnInit {
     private filterItem;
     private updateCheckedOfAll;
     private updateCollapsedOfAll;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeviewComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeviewComponent, "ngx-treeview", never, { "headerTemplate": { "alias": "headerTemplate"; "required": false; }; "itemTemplate": { "alias": "itemTemplate"; "required": false; }; "items": { "alias": "items"; "required": false; }; "config": { "alias": "config"; "required": false; }; }, { "selectedChange": "selectedChange"; "filterChange": "filterChange"; }, never, never, false, never>;
 }
