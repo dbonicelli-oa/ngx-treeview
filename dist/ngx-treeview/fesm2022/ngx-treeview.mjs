@@ -49,9 +49,9 @@ class DropdownDirective {
             i0.ɵɵlistener("keyup.esc", function DropdownDirective_keyup_esc_HostBindingHandler() { return ctx.onKeyupEsc(); })("click", function DropdownDirective_click_HostBindingHandler($event) { return ctx.onDocumentClick($event); }, false, i0.ɵɵresolveDocument);
         } if (rf & 2) {
             i0.ɵɵclassProp("show", ctx.isOpen);
-        } }, inputs: { internalOpen: ["open", "internalOpen"] }, outputs: { openChange: "openChange" }, exportAs: ["ngxDropdown"] });
+        } }, inputs: { internalOpen: [i0.ɵɵInputFlags.None, "open", "internalOpen"] }, outputs: { openChange: "openChange" }, exportAs: ["ngxDropdown"] });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DropdownDirective, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DropdownDirective, [{
         type: Directive,
         args: [{
                 selector: '[ngxDropdown]',
@@ -83,7 +83,7 @@ class DropdownMenuDirective {
             i0.ɵɵclassProp("dropdown-menu", true)("show", ctx.dropdown.isOpen);
         } } });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DropdownMenuDirective, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DropdownMenuDirective, [{
         type: Directive,
         args: [{
                 selector: '[ngxDropdownMenu]',
@@ -92,7 +92,7 @@ class DropdownMenuDirective {
                     '[class.show]': 'dropdown.isOpen'
                 }
             }]
-    }], function () { return [{ type: DropdownDirective }]; }, null); })();
+    }], () => [{ type: DropdownDirective }], null); })();
 
 class DropdownToggleDirective {
     dropdown;
@@ -107,7 +107,7 @@ class DropdownToggleDirective {
             i0.ɵɵattribute("aria-expanded", ctx.dropdown.isOpen);
         } } });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DropdownToggleDirective, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DropdownToggleDirective, [{
         type: Directive,
         args: [{
                 selector: '[ngxDropdownToggle]',
@@ -118,7 +118,7 @@ class DropdownToggleDirective {
                     '(click)': 'dropdown.toggle()'
                 }
             }]
-    }], function () { return [{ type: DropdownDirective }, { type: i0.ElementRef }]; }, null); })();
+    }], () => [{ type: DropdownDirective }, { type: i0.ElementRef }], null); })();
 
 const TreeviewHelper = {
     findItem,
@@ -375,7 +375,7 @@ class TreeviewI18n {
     static ɵfac = function TreeviewI18n_Factory(t) { return new (t || TreeviewI18n)(); };
     static ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: TreeviewI18n, factory: TreeviewI18n.ɵfac });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewI18n, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewI18n, [{
         type: Injectable
     }], null, null); })();
 class DefaultTreeviewI18n extends TreeviewI18n {
@@ -409,10 +409,10 @@ class DefaultTreeviewI18n extends TreeviewI18n {
     getTooltipCollapseExpandText(isCollapse) {
         return isCollapse ? 'Expand' : 'Collapse';
     }
-    static ɵfac = /*@__PURE__*/ function () { let ɵDefaultTreeviewI18n_BaseFactory; return function DefaultTreeviewI18n_Factory(t) { return (ɵDefaultTreeviewI18n_BaseFactory || (ɵDefaultTreeviewI18n_BaseFactory = i0.ɵɵgetInheritedFactory(DefaultTreeviewI18n)))(t || DefaultTreeviewI18n); }; }();
+    static ɵfac = /*@__PURE__*/ (() => { let ɵDefaultTreeviewI18n_BaseFactory; return function DefaultTreeviewI18n_Factory(t) { return (ɵDefaultTreeviewI18n_BaseFactory || (ɵDefaultTreeviewI18n_BaseFactory = i0.ɵɵgetInheritedFactory(DefaultTreeviewI18n)))(t || DefaultTreeviewI18n); }; })();
     static ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: DefaultTreeviewI18n, factory: DefaultTreeviewI18n.ɵfac });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DefaultTreeviewI18n, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DefaultTreeviewI18n, [{
         type: Injectable
     }], null, null); })();
 
@@ -434,7 +434,7 @@ class TreeviewConfig {
     static ɵfac = function TreeviewConfig_Factory(t) { return new (t || TreeviewConfig)(); };
     static ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: TreeviewConfig, factory: TreeviewConfig.ɵfac });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewConfig, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewConfig, [{
         type: Injectable
     }], null, null); })();
 
@@ -442,7 +442,7 @@ class TreeviewEventParser {
     static ɵfac = function TreeviewEventParser_Factory(t) { return new (t || TreeviewEventParser)(); };
     static ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: TreeviewEventParser, factory: TreeviewEventParser.ɵfac });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewEventParser, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewEventParser, [{
         type: Injectable
     }], null, null); })();
 class DefaultTreeviewEventParser extends TreeviewEventParser {
@@ -453,10 +453,10 @@ class DefaultTreeviewEventParser extends TreeviewEventParser {
         }
         return [];
     }
-    static ɵfac = /*@__PURE__*/ function () { let ɵDefaultTreeviewEventParser_BaseFactory; return function DefaultTreeviewEventParser_Factory(t) { return (ɵDefaultTreeviewEventParser_BaseFactory || (ɵDefaultTreeviewEventParser_BaseFactory = i0.ɵɵgetInheritedFactory(DefaultTreeviewEventParser)))(t || DefaultTreeviewEventParser); }; }();
+    static ɵfac = /*@__PURE__*/ (() => { let ɵDefaultTreeviewEventParser_BaseFactory; return function DefaultTreeviewEventParser_Factory(t) { return (ɵDefaultTreeviewEventParser_BaseFactory || (ɵDefaultTreeviewEventParser_BaseFactory = i0.ɵɵgetInheritedFactory(DefaultTreeviewEventParser)))(t || DefaultTreeviewEventParser); }; })();
     static ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: DefaultTreeviewEventParser, factory: DefaultTreeviewEventParser.ɵfac });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DefaultTreeviewEventParser, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DefaultTreeviewEventParser, [{
         type: Injectable
     }], null, null); })();
 class DownlineTreeviewEventParser extends TreeviewEventParser {
@@ -497,10 +497,10 @@ class DownlineTreeviewEventParser extends TreeviewEventParser {
         }
         return null;
     }
-    static ɵfac = /*@__PURE__*/ function () { let ɵDownlineTreeviewEventParser_BaseFactory; return function DownlineTreeviewEventParser_Factory(t) { return (ɵDownlineTreeviewEventParser_BaseFactory || (ɵDownlineTreeviewEventParser_BaseFactory = i0.ɵɵgetInheritedFactory(DownlineTreeviewEventParser)))(t || DownlineTreeviewEventParser); }; }();
+    static ɵfac = /*@__PURE__*/ (() => { let ɵDownlineTreeviewEventParser_BaseFactory; return function DownlineTreeviewEventParser_Factory(t) { return (ɵDownlineTreeviewEventParser_BaseFactory || (ɵDownlineTreeviewEventParser_BaseFactory = i0.ɵɵgetInheritedFactory(DownlineTreeviewEventParser)))(t || DownlineTreeviewEventParser); }; })();
     static ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: DownlineTreeviewEventParser, factory: DownlineTreeviewEventParser.ɵfac });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DownlineTreeviewEventParser, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DownlineTreeviewEventParser, [{
         type: Injectable
     }], null, null); })();
 class OrderDownlineTreeviewEventParser extends TreeviewEventParser {
@@ -531,23 +531,24 @@ class OrderDownlineTreeviewEventParser extends TreeviewEventParser {
         }
         return this.currentDownlines;
     }
-    static ɵfac = /*@__PURE__*/ function () { let ɵOrderDownlineTreeviewEventParser_BaseFactory; return function OrderDownlineTreeviewEventParser_Factory(t) { return (ɵOrderDownlineTreeviewEventParser_BaseFactory || (ɵOrderDownlineTreeviewEventParser_BaseFactory = i0.ɵɵgetInheritedFactory(OrderDownlineTreeviewEventParser)))(t || OrderDownlineTreeviewEventParser); }; }();
+    static ɵfac = /*@__PURE__*/ (() => { let ɵOrderDownlineTreeviewEventParser_BaseFactory; return function OrderDownlineTreeviewEventParser_Factory(t) { return (ɵOrderDownlineTreeviewEventParser_BaseFactory || (ɵOrderDownlineTreeviewEventParser_BaseFactory = i0.ɵɵgetInheritedFactory(OrderDownlineTreeviewEventParser)))(t || OrderDownlineTreeviewEventParser); }; })();
     static ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: OrderDownlineTreeviewEventParser, factory: OrderDownlineTreeviewEventParser.ɵfac });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(OrderDownlineTreeviewEventParser, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(OrderDownlineTreeviewEventParser, [{
         type: Injectable
     }], null, null); })();
 
+const _c0 = (a0, a1, a2) => ({ item: a0, onCollapseExpand: a1, onCheckedChange: a2 });
 function TreeviewItemComponent_div_0_ng_template_1_Template(rf, ctx) { }
 function TreeviewItemComponent_div_0_div_2_ngx_treeview_item_1_Template(rf, ctx) { if (rf & 1) {
-    const _r6 = i0.ɵɵgetCurrentView();
+    const _r1 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "ngx-treeview-item", 5);
-    i0.ɵɵlistener("checkedChange", function TreeviewItemComponent_div_0_div_2_ngx_treeview_item_1_Template_ngx_treeview_item_checkedChange_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r6); const child_r4 = restoredCtx.$implicit; const ctx_r5 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r5.onChildCheckedChange(child_r4, $event)); });
+    i0.ɵɵlistener("checkedChange", function TreeviewItemComponent_div_0_div_2_ngx_treeview_item_1_Template_ngx_treeview_item_checkedChange_0_listener($event) { const child_r2 = i0.ɵɵrestoreView(_r1).$implicit; const ctx_r2 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r2.onChildCheckedChange(child_r2, $event)); });
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const child_r4 = ctx.$implicit;
-    const ctx_r3 = i0.ɵɵnextContext(3);
-    i0.ɵɵproperty("config", ctx_r3.config)("item", child_r4)("template", ctx_r3.template);
+    const child_r2 = ctx.$implicit;
+    const ctx_r2 = i0.ɵɵnextContext(3);
+    i0.ɵɵproperty("config", ctx_r2.config)("item", child_r2)("template", ctx_r2.template);
 } }
 function TreeviewItemComponent_div_0_div_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div");
@@ -555,21 +556,19 @@ function TreeviewItemComponent_div_0_div_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r2 = i0.ɵɵnextContext(2);
-    i0.ɵɵadvance(1);
+    i0.ɵɵadvance();
     i0.ɵɵproperty("ngForOf", ctx_r2.item.children);
 } }
-const _c0 = function (a0, a1, a2) { return { item: a0, onCollapseExpand: a1, onCheckedChange: a2 }; };
 function TreeviewItemComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 1);
-    i0.ɵɵtemplate(1, TreeviewItemComponent_div_0_ng_template_1_Template, 0, 0, "ng-template", 2);
-    i0.ɵɵtemplate(2, TreeviewItemComponent_div_0_div_2_Template, 2, 1, "div", 3);
+    i0.ɵɵtemplate(1, TreeviewItemComponent_div_0_ng_template_1_Template, 0, 0, "ng-template", 2)(2, TreeviewItemComponent_div_0_div_2_Template, 2, 1, "div", 3);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r0 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngTemplateOutlet", ctx_r0.template)("ngTemplateOutletContext", i0.ɵɵpureFunction3(3, _c0, ctx_r0.item, ctx_r0.onCollapseExpand, ctx_r0.onCheckedChange));
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", !ctx_r0.item.collapsed);
+    const ctx_r2 = i0.ɵɵnextContext();
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("ngTemplateOutlet", ctx_r2.template)("ngTemplateOutletContext", i0.ɵɵpureFunction3(3, _c0, ctx_r2.item, ctx_r2.onCollapseExpand, ctx_r2.onCheckedChange));
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("ngIf", !ctx_r2.item.collapsed);
 } }
 class TreeviewItemComponent {
     defaultConfig;
@@ -613,16 +612,16 @@ class TreeviewItemComponent {
         this.checkedChange.emit(checked);
     }
     static ɵfac = function TreeviewItemComponent_Factory(t) { return new (t || TreeviewItemComponent)(i0.ɵɵdirectiveInject(TreeviewConfig)); };
-    static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TreeviewItemComponent, selectors: [["ngx-treeview-item"]], inputs: { config: "config", template: "template", item: "item" }, outputs: { checkedChange: "checkedChange" }, decls: 1, vars: 1, consts: [["class", "treeview-item", 4, "ngIf"], [1, "treeview-item"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], [4, "ngIf"], [3, "config", "item", "template", "checkedChange", 4, "ngFor", "ngForOf"], [3, "config", "item", "template", "checkedChange"]], template: function TreeviewItemComponent_Template(rf, ctx) { if (rf & 1) {
+    static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TreeviewItemComponent, selectors: [["ngx-treeview-item"]], inputs: { config: "config", template: "template", item: "item" }, outputs: { checkedChange: "checkedChange" }, decls: 1, vars: 1, consts: [["class", "treeview-item", 4, "ngIf"], [1, "treeview-item"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], [4, "ngIf"], [3, "config", "item", "template", "checkedChange", 4, "ngFor", "ngForOf"], [3, "checkedChange", "config", "item", "template"]], template: function TreeviewItemComponent_Template(rf, ctx) { if (rf & 1) {
             i0.ɵɵtemplate(0, TreeviewItemComponent_div_0_Template, 3, 7, "div", 0);
         } if (rf & 2) {
             i0.ɵɵproperty("ngIf", ctx.item);
         } }, dependencies: [i5.NgForOf, i5.NgIf, i5.NgTemplateOutlet, TreeviewItemComponent], styles: ["[_nghost-%COMP%]{display:block}[_nghost-%COMP%]   .treeview-item[_ngcontent-%COMP%]{white-space:nowrap}[_nghost-%COMP%]   .treeview-item[_ngcontent-%COMP%]   .treeview-item[_ngcontent-%COMP%]{margin-left:2rem}"] });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewItemComponent, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewItemComponent, [{
         type: Component,
         args: [{ selector: 'ngx-treeview-item', template: "<div *ngIf=\"item\" class=\"treeview-item\">\n  <ng-template [ngTemplateOutlet]=\"template\"\n    [ngTemplateOutletContext]=\"{item: item, onCollapseExpand: onCollapseExpand, onCheckedChange: onCheckedChange}\">\n  </ng-template>\n  <div *ngIf=\"!item.collapsed\">\n    <ngx-treeview-item [config]=\"config\" *ngFor=\"let child of item.children\" [item]=\"child\" [template]=\"template\"\n      (checkedChange)=\"onChildCheckedChange(child, $event)\">\n    </ngx-treeview-item>\n  </div>\n</div>\n", styles: [":host{display:block}:host .treeview-item{white-space:nowrap}:host .treeview-item .treeview-item{margin-left:2rem}\n"] }]
-    }], function () { return [{ type: TreeviewConfig }]; }, { config: [{
+    }], () => [{ type: TreeviewConfig }], { config: [{
             type: Input
         }], template: [{
             type: Input
@@ -631,6 +630,7 @@ class TreeviewItemComponent {
         }], checkedChange: [{
             type: Output
         }] }); })();
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(TreeviewItemComponent, { className: "TreeviewItemComponent" }); })();
 
 function TreeviewComponent_ng_template_0_i_1__svg_svg_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵnamespaceSVG();
@@ -645,84 +645,90 @@ function TreeviewComponent_ng_template_0_i_1__svg_svg_2_Template(rf, ctx) { if (
     i0.ɵɵelementEnd();
 } }
 function TreeviewComponent_ng_template_0_i_1_Template(rf, ctx) { if (rf & 1) {
-    const _r15 = i0.ɵɵgetCurrentView();
+    const _r2 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "i", 12);
-    i0.ɵɵlistener("click", function TreeviewComponent_ng_template_0_i_1_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r15); const onCollapseExpand_r8 = i0.ɵɵnextContext().onCollapseExpand; return i0.ɵɵresetView(onCollapseExpand_r8()); });
-    i0.ɵɵtemplate(1, TreeviewComponent_ng_template_0_i_1__svg_svg_1_Template, 2, 0, "svg", 13);
-    i0.ɵɵtemplate(2, TreeviewComponent_ng_template_0_i_1__svg_svg_2_Template, 2, 0, "svg", 14);
+    i0.ɵɵlistener("click", function TreeviewComponent_ng_template_0_i_1_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r2); const onCollapseExpand_r3 = i0.ɵɵnextContext().onCollapseExpand; return i0.ɵɵresetView(onCollapseExpand_r3()); });
+    i0.ɵɵtemplate(1, TreeviewComponent_ng_template_0_i_1__svg_svg_1_Template, 2, 0, "svg", 13)(2, TreeviewComponent_ng_template_0_i_1__svg_svg_2_Template, 2, 0, "svg", 14);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r7 = i0.ɵɵnextContext().item;
-    i0.ɵɵproperty("ngSwitch", item_r7.collapsed);
-    i0.ɵɵadvance(1);
+    const item_r4 = i0.ɵɵnextContext().item;
+    i0.ɵɵproperty("ngSwitch", item_r4.collapsed);
+    i0.ɵɵadvance();
     i0.ɵɵproperty("ngSwitchCase", true);
-    i0.ɵɵadvance(1);
+    i0.ɵɵadvance();
     i0.ɵɵproperty("ngSwitchCase", false);
 } }
 function TreeviewComponent_ng_template_0_Template(rf, ctx) { if (rf & 1) {
-    const _r18 = i0.ɵɵgetCurrentView();
+    const _r1 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "div", 7);
     i0.ɵɵtemplate(1, TreeviewComponent_ng_template_0_i_1_Template, 3, 3, "i", 8);
     i0.ɵɵelementStart(2, "div", 9)(3, "input", 10);
-    i0.ɵɵlistener("ngModelChange", function TreeviewComponent_ng_template_0_Template_input_ngModelChange_3_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r18); const item_r7 = restoredCtx.item; return i0.ɵɵresetView(item_r7.checked = $event); })("ngModelChange", function TreeviewComponent_ng_template_0_Template_input_ngModelChange_3_listener() { const restoredCtx = i0.ɵɵrestoreView(_r18); const onCheckedChange_r9 = restoredCtx.onCheckedChange; return i0.ɵɵresetView(onCheckedChange_r9()); });
+    i0.ɵɵtwoWayListener("ngModelChange", function TreeviewComponent_ng_template_0_Template_input_ngModelChange_3_listener($event) { const item_r4 = i0.ɵɵrestoreView(_r1).item; i0.ɵɵtwoWayBindingSet(item_r4.checked, $event) || (item_r4.checked = $event); return i0.ɵɵresetView($event); });
+    i0.ɵɵlistener("ngModelChange", function TreeviewComponent_ng_template_0_Template_input_ngModelChange_3_listener() { const onCheckedChange_r5 = i0.ɵɵrestoreView(_r1).onCheckedChange; return i0.ɵɵresetView(onCheckedChange_r5()); });
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(4, "label", 11);
-    i0.ɵɵlistener("click", function TreeviewComponent_ng_template_0_Template_label_click_4_listener() { const restoredCtx = i0.ɵɵrestoreView(_r18); const item_r7 = restoredCtx.item; const onCheckedChange_r9 = restoredCtx.onCheckedChange; item_r7.checked = !item_r7.checked; return i0.ɵɵresetView(onCheckedChange_r9()); });
+    i0.ɵɵlistener("click", function TreeviewComponent_ng_template_0_Template_label_click_4_listener() { const ctx_r5 = i0.ɵɵrestoreView(_r1); const item_r4 = ctx_r5.item; const onCheckedChange_r5 = ctx_r5.onCheckedChange; item_r4.checked = !item_r4.checked; return i0.ɵɵresetView(onCheckedChange_r5()); });
     i0.ɵɵtext(5);
     i0.ɵɵelementEnd()()();
 } if (rf & 2) {
-    const item_r7 = ctx.item;
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", item_r7.children);
+    const item_r4 = ctx.item;
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("ngIf", item_r4.children);
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("ngModel", item_r7.checked)("disabled", item_r7.disabled)("indeterminate", item_r7.indeterminate);
+    i0.ɵɵtwoWayProperty("ngModel", item_r4.checked);
+    i0.ɵɵproperty("disabled", item_r4.disabled)("indeterminate", item_r4.indeterminate);
     i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate1(" ", item_r7.text, " ");
+    i0.ɵɵtextInterpolate1(" ", item_r4.text, " ");
 } }
 function TreeviewComponent_ng_template_2_div_0_div_3_Template(rf, ctx) { if (rf & 1) {
-    const _r31 = i0.ɵɵgetCurrentView();
+    const _r10 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "div", 25)(1, "input", 26);
-    i0.ɵɵlistener("ngModelChange", function TreeviewComponent_ng_template_2_div_0_div_3_Template_input_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r31); const ctx_r30 = i0.ɵɵnextContext(3); return i0.ɵɵresetView(ctx_r30.showHidden = $event); })("ngModelChange", function TreeviewComponent_ng_template_2_div_0_div_3_Template_input_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r31); const onFilterShowHiddenChange_r26 = i0.ɵɵnextContext(2).onFilterShowHiddenChange; return i0.ɵɵresetView(onFilterShowHiddenChange_r26($event)); });
+    i0.ɵɵtwoWayListener("ngModelChange", function TreeviewComponent_ng_template_2_div_0_div_3_Template_input_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r10); const ctx_r7 = i0.ɵɵnextContext(3); i0.ɵɵtwoWayBindingSet(ctx_r7.showHidden, $event) || (ctx_r7.showHidden = $event); return i0.ɵɵresetView($event); });
+    i0.ɵɵlistener("ngModelChange", function TreeviewComponent_ng_template_2_div_0_div_3_Template_input_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r10); const onFilterShowHiddenChange_r11 = i0.ɵɵnextContext(2).onFilterShowHiddenChange; return i0.ɵɵresetView(onFilterShowHiddenChange_r11($event)); });
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(2, "label", 27);
     i0.ɵɵtext(3, "Show Hidden");
     i0.ɵɵelementEnd()();
 } if (rf & 2) {
-    const ctx_r29 = i0.ɵɵnextContext(3);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngModel", ctx_r29.showHidden);
+    const ctx_r7 = i0.ɵɵnextContext(3);
+    i0.ɵɵadvance();
+    i0.ɵɵtwoWayProperty("ngModel", ctx_r7.showHidden);
 } }
 function TreeviewComponent_ng_template_2_div_0_Template(rf, ctx) { if (rf & 1) {
-    const _r35 = i0.ɵɵgetCurrentView();
+    const _r7 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "div", 21)(1, "div", 22)(2, "input", 23);
-    i0.ɵɵlistener("ngModelChange", function TreeviewComponent_ng_template_2_div_0_Template_input_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r35); const ctx_r34 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r34.filterText = $event); })("ngModelChange", function TreeviewComponent_ng_template_2_div_0_Template_input_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r35); const onFilterTextChange_r25 = i0.ɵɵnextContext().onFilterTextChange; return i0.ɵɵresetView(onFilterTextChange_r25($event)); });
+    i0.ɵɵtwoWayListener("ngModelChange", function TreeviewComponent_ng_template_2_div_0_Template_input_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r7); const ctx_r7 = i0.ɵɵnextContext(2); i0.ɵɵtwoWayBindingSet(ctx_r7.filterText, $event) || (ctx_r7.filterText = $event); return i0.ɵɵresetView($event); });
+    i0.ɵɵlistener("ngModelChange", function TreeviewComponent_ng_template_2_div_0_Template_input_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r7); const onFilterTextChange_r9 = i0.ɵɵnextContext().onFilterTextChange; return i0.ɵɵresetView(onFilterTextChange_r9($event)); });
     i0.ɵɵelementEnd()();
     i0.ɵɵtemplate(3, TreeviewComponent_ng_template_2_div_0_div_3_Template, 4, 1, "div", 24);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const config_r21 = i0.ɵɵnextContext().config;
-    const ctx_r27 = i0.ɵɵnextContext();
+    const config_r12 = i0.ɵɵnextContext().config;
+    const ctx_r7 = i0.ɵɵnextContext();
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("placeholder", ctx_r27.i18n.getFilterPlaceholder())("ngModel", ctx_r27.filterText);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", config_r21.filterHidden);
+    i0.ɵɵproperty("placeholder", ctx_r7.i18n.getFilterPlaceholder());
+    i0.ɵɵtwoWayProperty("ngModel", ctx_r7.filterText);
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("ngIf", config_r12.filterHidden);
 } }
 function TreeviewComponent_ng_template_2_div_1_div_1_div_2_Template(rf, ctx) { if (rf & 1) {
-    const _r45 = i0.ɵɵgetCurrentView();
+    const _r13 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "div", 33)(1, "input", 34);
-    i0.ɵɵlistener("ngModelChange", function TreeviewComponent_ng_template_2_div_1_div_1_div_2_Template_input_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r45); const item_r22 = i0.ɵɵnextContext(3).item; return i0.ɵɵresetView(item_r22.checked = $event); })("ngModelChange", function TreeviewComponent_ng_template_2_div_1_div_1_div_2_Template_input_ngModelChange_1_listener() { i0.ɵɵrestoreView(_r45); const onCheckedChange_r24 = i0.ɵɵnextContext(3).onCheckedChange; return i0.ɵɵresetView(onCheckedChange_r24()); });
+    i0.ɵɵtwoWayListener("ngModelChange", function TreeviewComponent_ng_template_2_div_1_div_1_div_2_Template_input_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r13); const item_r14 = i0.ɵɵnextContext(3).item; i0.ɵɵtwoWayBindingSet(item_r14.checked, $event) || (item_r14.checked = $event); return i0.ɵɵresetView($event); });
+    i0.ɵɵlistener("ngModelChange", function TreeviewComponent_ng_template_2_div_1_div_1_div_2_Template_input_ngModelChange_1_listener() { i0.ɵɵrestoreView(_r13); const onCheckedChange_r15 = i0.ɵɵnextContext(3).onCheckedChange; return i0.ɵɵresetView(onCheckedChange_r15()); });
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(2, "label", 11);
-    i0.ɵɵlistener("click", function TreeviewComponent_ng_template_2_div_1_div_1_div_2_Template_label_click_2_listener() { i0.ɵɵrestoreView(_r45); const ctx_r49 = i0.ɵɵnextContext(3); const item_r22 = ctx_r49.item; const onCheckedChange_r24 = ctx_r49.onCheckedChange; item_r22.checked = !item_r22.checked; return i0.ɵɵresetView(onCheckedChange_r24()); });
+    i0.ɵɵlistener("click", function TreeviewComponent_ng_template_2_div_1_div_1_div_2_Template_label_click_2_listener() { i0.ɵɵrestoreView(_r13); const ctx_r15 = i0.ɵɵnextContext(3); const item_r14 = ctx_r15.item; const onCheckedChange_r15 = ctx_r15.onCheckedChange; item_r14.checked = !item_r14.checked; return i0.ɵɵresetView(onCheckedChange_r15()); });
     i0.ɵɵtext(3);
     i0.ɵɵelementEnd()();
 } if (rf & 2) {
-    const item_r22 = i0.ɵɵnextContext(3).item;
-    const ctx_r41 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngModel", item_r22.checked)("indeterminate", item_r22.indeterminate);
+    const item_r14 = i0.ɵɵnextContext(3).item;
+    const ctx_r7 = i0.ɵɵnextContext();
+    i0.ɵɵadvance();
+    i0.ɵɵtwoWayProperty("ngModel", item_r14.checked);
+    i0.ɵɵproperty("indeterminate", item_r14.indeterminate);
     i0.ɵɵadvance(2);
-    i0.ɵɵtextInterpolate1(" ", ctx_r41.i18n.getAllCheckboxText(), " ");
+    i0.ɵɵtextInterpolate1(" ", ctx_r7.i18n.getAllCheckboxText(), " ");
 } }
 function TreeviewComponent_ng_template_2_div_1_div_1_label_3__svg_svg_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵnamespaceSVG();
@@ -737,90 +743,86 @@ function TreeviewComponent_ng_template_2_div_1_div_1_label_3__svg_svg_3_Template
     i0.ɵɵelementEnd();
 } }
 function TreeviewComponent_ng_template_2_div_1_div_1_label_3_Template(rf, ctx) { if (rf & 1) {
-    const _r55 = i0.ɵɵgetCurrentView();
+    const _r17 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "label", 35);
-    i0.ɵɵlistener("click", function TreeviewComponent_ng_template_2_div_1_div_1_label_3_Template_label_click_0_listener() { i0.ɵɵrestoreView(_r55); const onCollapseExpand_r23 = i0.ɵɵnextContext(3).onCollapseExpand; return i0.ɵɵresetView(onCollapseExpand_r23()); });
+    i0.ɵɵlistener("click", function TreeviewComponent_ng_template_2_div_1_div_1_label_3_Template_label_click_0_listener() { i0.ɵɵrestoreView(_r17); const onCollapseExpand_r18 = i0.ɵɵnextContext(3).onCollapseExpand; return i0.ɵɵresetView(onCollapseExpand_r18()); });
     i0.ɵɵelementStart(1, "i", 36);
-    i0.ɵɵtemplate(2, TreeviewComponent_ng_template_2_div_1_div_1_label_3__svg_svg_2_Template, 4, 0, "svg", 37);
-    i0.ɵɵtemplate(3, TreeviewComponent_ng_template_2_div_1_div_1_label_3__svg_svg_3_Template, 4, 0, "svg", 38);
+    i0.ɵɵtemplate(2, TreeviewComponent_ng_template_2_div_1_div_1_label_3__svg_svg_2_Template, 4, 0, "svg", 37)(3, TreeviewComponent_ng_template_2_div_1_div_1_label_3__svg_svg_3_Template, 4, 0, "svg", 38);
     i0.ɵɵelementEnd()();
 } if (rf & 2) {
-    const item_r22 = i0.ɵɵnextContext(3).item;
-    const ctx_r42 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("title", ctx_r42.i18n.getTooltipCollapseExpandText(item_r22.collapsed))("ngSwitch", item_r22.collapsed);
-    i0.ɵɵadvance(1);
+    const item_r14 = i0.ɵɵnextContext(3).item;
+    const ctx_r7 = i0.ɵɵnextContext();
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("title", ctx_r7.i18n.getTooltipCollapseExpandText(item_r14.collapsed))("ngSwitch", item_r14.collapsed);
+    i0.ɵɵadvance();
     i0.ɵɵproperty("ngSwitchCase", true);
-    i0.ɵɵadvance(1);
+    i0.ɵɵadvance();
     i0.ɵɵproperty("ngSwitchCase", false);
 } }
 function TreeviewComponent_ng_template_2_div_1_div_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 30)(1, "div", 22);
-    i0.ɵɵtemplate(2, TreeviewComponent_ng_template_2_div_1_div_1_div_2_Template, 4, 3, "div", 31);
-    i0.ɵɵtemplate(3, TreeviewComponent_ng_template_2_div_1_div_1_label_3_Template, 4, 4, "label", 32);
+    i0.ɵɵtemplate(2, TreeviewComponent_ng_template_2_div_1_div_1_div_2_Template, 4, 3, "div", 31)(3, TreeviewComponent_ng_template_2_div_1_div_1_label_3_Template, 4, 4, "label", 32);
     i0.ɵɵelementEnd()();
 } if (rf & 2) {
-    const config_r21 = i0.ɵɵnextContext(2).config;
+    const config_r12 = i0.ɵɵnextContext(2).config;
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("ngIf", config_r21.hasAllCheckBox);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", config_r21.hasCollapseExpand);
+    i0.ɵɵproperty("ngIf", config_r12.hasAllCheckBox);
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("ngIf", config_r12.hasCollapseExpand);
 } }
 function TreeviewComponent_ng_template_2_div_1_div_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "div", 47);
 } }
 function TreeviewComponent_ng_template_2_div_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div");
-    i0.ɵɵtemplate(1, TreeviewComponent_ng_template_2_div_1_div_1_Template, 4, 2, "div", 28);
-    i0.ɵɵtemplate(2, TreeviewComponent_ng_template_2_div_1_div_2_Template, 1, 0, "div", 29);
+    i0.ɵɵtemplate(1, TreeviewComponent_ng_template_2_div_1_div_1_Template, 4, 2, "div", 28)(2, TreeviewComponent_ng_template_2_div_1_div_2_Template, 1, 0, "div", 29);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const config_r21 = i0.ɵɵnextContext().config;
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", config_r21.hasAllCheckBox || config_r21.hasCollapseExpand);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", config_r21.hasDivider);
+    const config_r12 = i0.ɵɵnextContext().config;
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("ngIf", config_r12.hasAllCheckBox || config_r12.hasCollapseExpand);
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("ngIf", config_r12.hasDivider);
 } }
 function TreeviewComponent_ng_template_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵtemplate(0, TreeviewComponent_ng_template_2_div_0_Template, 4, 3, "div", 19);
-    i0.ɵɵtemplate(1, TreeviewComponent_ng_template_2_div_1_Template, 3, 2, "div", 20);
+    i0.ɵɵtemplate(0, TreeviewComponent_ng_template_2_div_0_Template, 4, 3, "div", 19)(1, TreeviewComponent_ng_template_2_div_1_Template, 3, 2, "div", 20);
 } if (rf & 2) {
-    const config_r21 = ctx.config;
-    const ctx_r3 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("ngIf", config_r21.hasFilter);
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngIf", ctx_r3.hasFilterItems);
+    const config_r12 = ctx.config;
+    const ctx_r7 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("ngIf", config_r12.hasFilter);
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("ngIf", ctx_r7.hasFilterItems);
 } }
 function TreeviewComponent_ng_template_5_Template(rf, ctx) { }
 function TreeviewComponent_div_7_ngx_treeview_item_1_Template(rf, ctx) { if (rf & 1) {
-    const _r62 = i0.ɵɵgetCurrentView();
+    const _r19 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "ngx-treeview-item", 50);
-    i0.ɵɵlistener("checkedChange", function TreeviewComponent_div_7_ngx_treeview_item_1_Template_ngx_treeview_item_checkedChange_0_listener($event) { const restoredCtx = i0.ɵɵrestoreView(_r62); const item_r60 = restoredCtx.$implicit; const ctx_r61 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r61.onItemCheckedChange(item_r60, $event)); });
+    i0.ɵɵlistener("checkedChange", function TreeviewComponent_div_7_ngx_treeview_item_1_Template_ngx_treeview_item_checkedChange_0_listener($event) { const item_r20 = i0.ɵɵrestoreView(_r19).$implicit; const ctx_r7 = i0.ɵɵnextContext(2); return i0.ɵɵresetView(ctx_r7.onItemCheckedChange(item_r20, $event)); });
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r60 = ctx.$implicit;
-    const ctx_r59 = i0.ɵɵnextContext(2);
-    const _r0 = i0.ɵɵreference(1);
-    i0.ɵɵproperty("config", ctx_r59.config)("item", item_r60)("template", ctx_r59.itemTemplate || _r0);
+    const item_r20 = ctx.$implicit;
+    const ctx_r7 = i0.ɵɵnextContext(2);
+    const defaultItemTemplate_r21 = i0.ɵɵreference(1);
+    i0.ɵɵproperty("config", ctx_r7.config)("item", item_r20)("template", ctx_r7.itemTemplate || defaultItemTemplate_r21);
 } }
 function TreeviewComponent_div_7_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 48);
     i0.ɵɵtemplate(1, TreeviewComponent_div_7_ngx_treeview_item_1_Template, 1, 3, "ngx-treeview-item", 49);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r5 = i0.ɵɵnextContext();
-    i0.ɵɵstyleProp("max-height", ctx_r5.maxHeight, "px");
-    i0.ɵɵadvance(1);
-    i0.ɵɵproperty("ngForOf", ctx_r5.filterItems);
+    const ctx_r7 = i0.ɵɵnextContext();
+    i0.ɵɵstyleProp("max-height", ctx_r7.maxHeight, "px");
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("ngForOf", ctx_r7.filterItems);
 } }
 function TreeviewComponent_div_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div", 51);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r6 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", ctx_r6.i18n.getFilterNoItemsFoundText(), " ");
+    const ctx_r7 = i0.ɵɵnextContext();
+    i0.ɵɵadvance();
+    i0.ɵɵtextInterpolate1(" ", ctx_r7.i18n.getFilterNoItemsFoundText(), " ");
 } }
 class FilterTreeviewItem extends TreeviewItem {
     refItem;
@@ -1081,32 +1083,30 @@ class TreeviewComponent {
         this.allItem.collapsed = !hasItemExpanded;
     }
     static ɵfac = function TreeviewComponent_Factory(t) { return new (t || TreeviewComponent)(i0.ɵɵdirectiveInject(TreeviewI18n), i0.ɵɵdirectiveInject(TreeviewConfig), i0.ɵɵdirectiveInject(TreeviewEventParser)); };
-    static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TreeviewComponent, selectors: [["ngx-treeview"]], inputs: { headerTemplate: "headerTemplate", itemTemplate: "itemTemplate", items: "items", config: "config" }, outputs: { selectedChange: "selectedChange", filterChange: "filterChange" }, features: [i0.ɵɵNgOnChangesFeature], decls: 9, vars: 5, consts: [["defaultItemTemplate", ""], ["defaultHeaderTemplate", ""], [1, "treeview-header"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], [3, "ngSwitch"], ["class", "treeview-container", 3, "max-height", 4, "ngSwitchCase"], ["class", "treeview-text", 4, "ngSwitchCase"], [1, "form-inline", "row-item"], ["aria-hidden", "true", 3, "ngSwitch", "click", 4, "ngIf"], [1, "form-check"], ["type", "checkbox", 1, "form-check-input", 3, "ngModel", "disabled", "indeterminate", "ngModelChange"], [1, "form-check-label", 3, "click"], ["aria-hidden", "true", 3, "ngSwitch", "click"], ["width", "0.8rem", "height", "0.8rem", "viewBox", "0 0 16 16", "class", "bi bi-caret-right-fill", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 4, "ngSwitchCase"], ["width", "0.8rem", "height", "0.8rem", "viewBox", "0 0 16 16", "class", "bi bi-caret-down-fill", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 4, "ngSwitchCase"], ["width", "0.8rem", "height", "0.8rem", "viewBox", "0 0 16 16", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 1, "bi", "bi-caret-right-fill"], ["d", "M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"], ["width", "0.8rem", "height", "0.8rem", "viewBox", "0 0 16 16", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 1, "bi", "bi-caret-down-fill"], ["d", "M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"], ["class", "row row-filter", 4, "ngIf"], [4, "ngIf"], [1, "row", "row-filter"], [1, "col-12"], ["type", "text", 1, "form-control", 3, "placeholder", "ngModel", "ngModelChange"], ["class", "col-12", "style", "margin-top: 10px", 4, "ngIf"], [1, "col-12", 2, "margin-top", "10px"], ["id", "filterToggle", "type", "checkbox", 1, "form-check-input", 2, "margin-right", "7px", 3, "ngModel", "ngModelChange"], ["for", "filterToggle", 1, "form-check-label"], ["class", "row row-all", 4, "ngIf"], ["class", "dropdown-divider", 4, "ngIf"], [1, "row", "row-all"], ["class", "form-check form-check-inline", 4, "ngIf"], ["class", "float-right form-check-label", 3, "click", 4, "ngIf"], [1, "form-check", "form-check-inline"], ["type", "checkbox", 1, "form-check-input", 3, "ngModel", "indeterminate", "ngModelChange"], [1, "float-right", "form-check-label", 3, "click"], ["aria-hidden", "true", 3, "title", "ngSwitch"], ["width", "1em", "height", "1em", "viewBox", "0 0 16 16", "class", "bi bi-arrows-angle-expand", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 4, "ngSwitchCase"], ["width", "1em", "height", "1em", "viewBox", "0 0 16 16", "class", "bi bi-arrows-angle-contract", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 4, "ngSwitchCase"], ["width", "1em", "height", "1em", "viewBox", "0 0 16 16", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 1, "bi", "bi-arrows-angle-expand"], ["fill-rule", "evenodd", "d", "M1.5 10.036a.5.5 0 0 1 .5.5v3.5h3.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5z"], ["fill-rule", "evenodd", "d", "M6.354 9.646a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 0 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0zm8.5-8.5a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 0 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0z"], ["fill-rule", "evenodd", "d", "M10.036 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 1 1-1 0V2h-3.5a.5.5 0 0 1-.5-.5z"], ["width", "1em", "height", "1em", "viewBox", "0 0 16 16", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 1, "bi", "bi-arrows-angle-contract"], ["fill-rule", "evenodd", "d", "M9.5 2.036a.5.5 0 0 1 .5.5v3.5h3.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5z"], ["fill-rule", "evenodd", "d", "M14.354 1.646a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 1 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0zm-7.5 7.5a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 0 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0z"], ["fill-rule", "evenodd", "d", "M2.036 9.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V10h-3.5a.5.5 0 0 1-.5-.5z"], [1, "dropdown-divider"], [1, "treeview-container"], [3, "config", "item", "template", "checkedChange", 4, "ngFor", "ngForOf"], [3, "config", "item", "template", "checkedChange"], [1, "treeview-text"]], template: function TreeviewComponent_Template(rf, ctx) { if (rf & 1) {
-            i0.ɵɵtemplate(0, TreeviewComponent_ng_template_0_Template, 6, 5, "ng-template", null, 0, i0.ɵɵtemplateRefExtractor);
-            i0.ɵɵtemplate(2, TreeviewComponent_ng_template_2_Template, 2, 2, "ng-template", null, 1, i0.ɵɵtemplateRefExtractor);
+    static ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TreeviewComponent, selectors: [["ngx-treeview"]], inputs: { headerTemplate: "headerTemplate", itemTemplate: "itemTemplate", items: "items", config: "config" }, outputs: { selectedChange: "selectedChange", filterChange: "filterChange" }, features: [i0.ɵɵNgOnChangesFeature], decls: 9, vars: 5, consts: [["defaultItemTemplate", ""], ["defaultHeaderTemplate", ""], [1, "treeview-header"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], [3, "ngSwitch"], ["class", "treeview-container", 3, "max-height", 4, "ngSwitchCase"], ["class", "treeview-text", 4, "ngSwitchCase"], [1, "form-inline", "row-item"], ["aria-hidden", "true", 3, "ngSwitch", "click", 4, "ngIf"], [1, "form-check"], ["type", "checkbox", 1, "form-check-input", 3, "ngModelChange", "ngModel", "disabled", "indeterminate"], [1, "form-check-label", 3, "click"], ["aria-hidden", "true", 3, "click", "ngSwitch"], ["width", "0.8rem", "height", "0.8rem", "viewBox", "0 0 16 16", "class", "bi bi-caret-right-fill", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 4, "ngSwitchCase"], ["width", "0.8rem", "height", "0.8rem", "viewBox", "0 0 16 16", "class", "bi bi-caret-down-fill", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 4, "ngSwitchCase"], ["width", "0.8rem", "height", "0.8rem", "viewBox", "0 0 16 16", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 1, "bi", "bi-caret-right-fill"], ["d", "M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"], ["width", "0.8rem", "height", "0.8rem", "viewBox", "0 0 16 16", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 1, "bi", "bi-caret-down-fill"], ["d", "M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"], ["class", "row row-filter", 4, "ngIf"], [4, "ngIf"], [1, "row", "row-filter"], [1, "col-12"], ["type", "text", 1, "form-control", 3, "ngModelChange", "placeholder", "ngModel"], ["class", "col-12", "style", "margin-top: 10px", 4, "ngIf"], [1, "col-12", 2, "margin-top", "10px"], ["id", "filterToggle", "type", "checkbox", 1, "form-check-input", 2, "margin-right", "7px", 3, "ngModelChange", "ngModel"], ["for", "filterToggle", 1, "form-check-label"], ["class", "row row-all", 4, "ngIf"], ["class", "dropdown-divider", 4, "ngIf"], [1, "row", "row-all"], ["class", "form-check form-check-inline", 4, "ngIf"], ["class", "float-right form-check-label", 3, "click", 4, "ngIf"], [1, "form-check", "form-check-inline"], ["type", "checkbox", 1, "form-check-input", 3, "ngModelChange", "ngModel", "indeterminate"], [1, "float-right", "form-check-label", 3, "click"], ["aria-hidden", "true", 3, "title", "ngSwitch"], ["width", "1em", "height", "1em", "viewBox", "0 0 16 16", "class", "bi bi-arrows-angle-expand", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 4, "ngSwitchCase"], ["width", "1em", "height", "1em", "viewBox", "0 0 16 16", "class", "bi bi-arrows-angle-contract", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 4, "ngSwitchCase"], ["width", "1em", "height", "1em", "viewBox", "0 0 16 16", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 1, "bi", "bi-arrows-angle-expand"], ["fill-rule", "evenodd", "d", "M1.5 10.036a.5.5 0 0 1 .5.5v3.5h3.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5z"], ["fill-rule", "evenodd", "d", "M6.354 9.646a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 0 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0zm8.5-8.5a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 0 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0z"], ["fill-rule", "evenodd", "d", "M10.036 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 1 1-1 0V2h-3.5a.5.5 0 0 1-.5-.5z"], ["width", "1em", "height", "1em", "viewBox", "0 0 16 16", "fill", "currentColor", "xmlns", "http://www.w3.org/2000/svg", 1, "bi", "bi-arrows-angle-contract"], ["fill-rule", "evenodd", "d", "M9.5 2.036a.5.5 0 0 1 .5.5v3.5h3.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5z"], ["fill-rule", "evenodd", "d", "M14.354 1.646a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 1 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0zm-7.5 7.5a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 0 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0z"], ["fill-rule", "evenodd", "d", "M2.036 9.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V10h-3.5a.5.5 0 0 1-.5-.5z"], [1, "dropdown-divider"], [1, "treeview-container"], [3, "config", "item", "template", "checkedChange", 4, "ngFor", "ngForOf"], [3, "checkedChange", "config", "item", "template"], [1, "treeview-text"]], template: function TreeviewComponent_Template(rf, ctx) { if (rf & 1) {
+            i0.ɵɵtemplate(0, TreeviewComponent_ng_template_0_Template, 6, 5, "ng-template", null, 0, i0.ɵɵtemplateRefExtractor)(2, TreeviewComponent_ng_template_2_Template, 2, 2, "ng-template", null, 1, i0.ɵɵtemplateRefExtractor);
             i0.ɵɵelementStart(4, "div", 2);
             i0.ɵɵtemplate(5, TreeviewComponent_ng_template_5_Template, 0, 0, "ng-template", 3);
             i0.ɵɵelementEnd();
             i0.ɵɵelementStart(6, "div", 4);
-            i0.ɵɵtemplate(7, TreeviewComponent_div_7_Template, 2, 3, "div", 5);
-            i0.ɵɵtemplate(8, TreeviewComponent_div_8_Template, 2, 1, "div", 6);
+            i0.ɵɵtemplate(7, TreeviewComponent_div_7_Template, 2, 3, "div", 5)(8, TreeviewComponent_div_8_Template, 2, 1, "div", 6);
             i0.ɵɵelementEnd();
         } if (rf & 2) {
-            const _r2 = i0.ɵɵreference(3);
+            const defaultHeaderTemplate_r22 = i0.ɵɵreference(3);
             i0.ɵɵadvance(5);
-            i0.ɵɵproperty("ngTemplateOutlet", ctx.headerTemplate || _r2)("ngTemplateOutletContext", ctx.headerTemplateContext);
-            i0.ɵɵadvance(1);
+            i0.ɵɵproperty("ngTemplateOutlet", ctx.headerTemplate || defaultHeaderTemplate_r22)("ngTemplateOutletContext", ctx.headerTemplateContext);
+            i0.ɵɵadvance();
             i0.ɵɵproperty("ngSwitch", ctx.hasFilterItems);
-            i0.ɵɵadvance(1);
+            i0.ɵɵadvance();
             i0.ɵɵproperty("ngSwitchCase", true);
-            i0.ɵɵadvance(1);
+            i0.ɵɵadvance();
             i0.ɵɵproperty("ngSwitchCase", false);
         } }, dependencies: [i4.DefaultValueAccessor, i4.CheckboxControlValueAccessor, i4.NgControlStatus, i4.NgModel, i5.NgForOf, i5.NgIf, i5.NgTemplateOutlet, i5.NgSwitch, i5.NgSwitchCase, TreeviewItemComponent], styles: ["[_nghost-%COMP%]   .treeview-header[_ngcontent-%COMP%]   .row-filter[_ngcontent-%COMP%]{margin-bottom:.5rem}[_nghost-%COMP%]   .treeview-header[_ngcontent-%COMP%]   .row-all[_ngcontent-%COMP%]   .bi[_ngcontent-%COMP%]{cursor:pointer}[_nghost-%COMP%]   .treeview-container[_ngcontent-%COMP%]   .row-item[_ngcontent-%COMP%]{margin-bottom:.3rem;flex-wrap:nowrap}[_nghost-%COMP%]   .treeview-container[_ngcontent-%COMP%]   .row-item[_ngcontent-%COMP%]   .bi[_ngcontent-%COMP%]{cursor:pointer;margin-right:.3rem}.treeview-container[_ngcontent-%COMP%]{overflow-y:auto;padding-right:.3rem}.treeview-text[_ngcontent-%COMP%]{padding:.3rem 0;white-space:nowrap}"] });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewComponent, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewComponent, [{
         type: Component,
         args: [{ selector: 'ngx-treeview', template: "<ng-template #defaultItemTemplate let-item=\"item\" let-onCollapseExpand=\"onCollapseExpand\"\n  let-onCheckedChange=\"onCheckedChange\">\n  <div class=\"form-inline row-item\">\n    <i *ngIf=\"item.children\" (click)=\"onCollapseExpand()\" aria-hidden=\"true\" [ngSwitch]=\"item.collapsed\">\n      <svg *ngSwitchCase=\"true\" width=\"0.8rem\" height=\"0.8rem\" viewBox=\"0 0 16 16\" class=\"bi bi-caret-right-fill\"\n        fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path\n          d=\"M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z\" />\n      </svg>\n      <svg *ngSwitchCase=\"false\" width=\"0.8rem\" height=\"0.8rem\" viewBox=\"0 0 16 16\" class=\"bi bi-caret-down-fill\"\n        fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path\n          d=\"M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z\" />\n      </svg>\n    </i>\n    <div class=\"form-check\">\n      <input type=\"checkbox\" class=\"form-check-input\" [(ngModel)]=\"item.checked\" (ngModelChange)=\"onCheckedChange()\"\n        [disabled]=\"item.disabled\" [indeterminate]=\"item.indeterminate\" />\n      <label class=\"form-check-label\" (click)=\"item.checked = !item.checked; onCheckedChange()\">\n        {{item.text}}\n      </label>\n    </div>\n  </div>\n</ng-template>\n<ng-template #defaultHeaderTemplate let-config=\"config\" let-item=\"item\" let-onCollapseExpand=\"onCollapseExpand\"\n  let-onCheckedChange=\"onCheckedChange\" let-onFilterTextChange=\"onFilterTextChange\" let-onFilterShowHiddenChange=\"onFilterShowHiddenChange\">\n  <div *ngIf=\"config.hasFilter\" class=\"row row-filter\">\n    <div class=\"col-12\">\n      <input class=\"form-control\" type=\"text\" [placeholder]=\"i18n.getFilterPlaceholder()\" [(ngModel)]=\"filterText\"\n        (ngModelChange)=\"onFilterTextChange($event)\" />\n    </div>\n    <div class=\"col-12\" style=\"margin-top: 10px\" *ngIf=\"config.filterHidden\">\n      <input class=\"form-check-input\" id=\"filterToggle\" style=\"margin-right: 7px;\" type=\"checkbox\" [(ngModel)]=\"showHidden\"\n             (ngModelChange)=\"onFilterShowHiddenChange($event)\" />\n      <label class=\"form-check-label\" for=\"filterToggle\">Show Hidden</label>\n    </div>\n  </div>\n  <div *ngIf=\"hasFilterItems\">\n    <div *ngIf=\"config.hasAllCheckBox || config.hasCollapseExpand\" class=\"row row-all\">\n      <div class=\"col-12\">\n        <div class=\"form-check form-check-inline\" *ngIf=\"config.hasAllCheckBox\">\n          <input type=\"checkbox\" class=\"form-check-input\" [(ngModel)]=\"item.checked\" (ngModelChange)=\"onCheckedChange()\"\n            [indeterminate]=\"item.indeterminate\" />\n          <label class=\"form-check-label\" (click)=\"item.checked = !item.checked; onCheckedChange()\">\n            {{i18n.getAllCheckboxText()}}\n          </label>\n        </div>\n        <label *ngIf=\"config.hasCollapseExpand\" class=\"float-right form-check-label\" (click)=\"onCollapseExpand()\">\n          <i [title]=\"i18n.getTooltipCollapseExpandText(item.collapsed)\" aria-hidden=\"true\" [ngSwitch]=\"item.collapsed\">\n            <svg *ngSwitchCase=\"true\" width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-arrows-angle-expand\"\n              fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\n              <path fill-rule=\"evenodd\"\n                d=\"M1.5 10.036a.5.5 0 0 1 .5.5v3.5h3.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5z\" />\n              <path fill-rule=\"evenodd\"\n                d=\"M6.354 9.646a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 0 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0zm8.5-8.5a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 0 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0z\" />\n              <path fill-rule=\"evenodd\"\n                d=\"M10.036 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 1 1-1 0V2h-3.5a.5.5 0 0 1-.5-.5z\" />\n            </svg>\n            <svg *ngSwitchCase=\"false\" width=\"1em\" height=\"1em\" viewBox=\"0 0 16 16\" class=\"bi bi-arrows-angle-contract\"\n              fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\n              <path fill-rule=\"evenodd\"\n                d=\"M9.5 2.036a.5.5 0 0 1 .5.5v3.5h3.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5z\" />\n              <path fill-rule=\"evenodd\"\n                d=\"M14.354 1.646a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 1 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0zm-7.5 7.5a.5.5 0 0 1 0 .708l-4.5 4.5a.5.5 0 0 1-.708-.708l4.5-4.5a.5.5 0 0 1 .708 0z\" />\n              <path fill-rule=\"evenodd\"\n                d=\"M2.036 9.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V10h-3.5a.5.5 0 0 1-.5-.5z\" />\n            </svg>\n          </i>\n        </label>\n      </div>\n    </div>\n    <div *ngIf=\"config.hasDivider\" class=\"dropdown-divider\"></div>\n  </div>\n</ng-template>\n<div class=\"treeview-header\">\n  <ng-template [ngTemplateOutlet]=\"headerTemplate || defaultHeaderTemplate\"\n    [ngTemplateOutletContext]=\"headerTemplateContext\">\n  </ng-template>\n</div>\n<div [ngSwitch]=\"hasFilterItems\">\n  <div *ngSwitchCase=\"true\" class=\"treeview-container\" [style.max-height.px]=\"maxHeight\">\n    <ngx-treeview-item *ngFor=\"let item of filterItems\" [config]=\"config\" [item]=\"item\"\n      [template]=\"itemTemplate || defaultItemTemplate\" (checkedChange)=\"onItemCheckedChange(item, $event)\">\n    </ngx-treeview-item>\n  </div>\n  <div *ngSwitchCase=\"false\" class=\"treeview-text\">\n    {{i18n.getFilterNoItemsFoundText()}}\n  </div>\n</div>\n", styles: [":host .treeview-header .row-filter{margin-bottom:.5rem}:host .treeview-header .row-all .bi{cursor:pointer}:host .treeview-container .row-item{margin-bottom:.3rem;flex-wrap:nowrap}:host .treeview-container .row-item .bi{cursor:pointer;margin-right:.3rem}.treeview-container{overflow-y:auto;padding-right:.3rem}.treeview-text{padding:.3rem 0;white-space:nowrap}\n"] }]
-    }], function () { return [{ type: TreeviewI18n }, { type: TreeviewConfig }, { type: TreeviewEventParser }]; }, { headerTemplate: [{
+    }], () => [{ type: TreeviewI18n }, { type: TreeviewConfig }, { type: TreeviewEventParser }], { headerTemplate: [{
             type: Input
         }], itemTemplate: [{
             type: Input
@@ -1119,6 +1119,7 @@ class TreeviewComponent {
         }], filterChange: [{
             type: Output
         }] }); })();
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(TreeviewComponent, { className: "TreeviewComponent" }); })();
 
 class DropdownTreeviewComponent {
     i18n;
@@ -1150,7 +1151,7 @@ class DropdownTreeviewComponent {
         } if (rf & 2) {
             let _t;
             i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.treeviewComponent = _t.first);
-        } }, inputs: { buttonClass: "buttonClass", headerTemplate: "headerTemplate", itemTemplate: "itemTemplate", items: "items", config: "config" }, outputs: { selectedChange: "selectedChange", filterChange: "filterChange" }, decls: 6, vars: 6, consts: [["ngxDropdown", "", 1, "dropdown"], ["type", "button", "role", "button", "ngxDropdownToggle", "", 1, "btn", 3, "ngClass"], ["ngxDropdownMenu", "", "aria-labelledby", "dropdownMenu", 3, "click"], [1, "dropdown-container"], [3, "config", "headerTemplate", "items", "itemTemplate", "selectedChange", "filterChange"]], template: function DropdownTreeviewComponent_Template(rf, ctx) { if (rf & 1) {
+        } }, inputs: { buttonClass: "buttonClass", headerTemplate: "headerTemplate", itemTemplate: "itemTemplate", items: "items", config: "config" }, outputs: { selectedChange: "selectedChange", filterChange: "filterChange" }, decls: 6, vars: 6, consts: [["ngxDropdown", "", 1, "dropdown"], ["type", "button", "role", "button", "ngxDropdownToggle", "", 1, "btn", 3, "ngClass"], ["ngxDropdownMenu", "", "aria-labelledby", "dropdownMenu", 3, "click"], [1, "dropdown-container"], [3, "selectedChange", "filterChange", "config", "headerTemplate", "items", "itemTemplate"]], template: function DropdownTreeviewComponent_Template(rf, ctx) { if (rf & 1) {
             i0.ɵɵelementStart(0, "div", 0)(1, "button", 1);
             i0.ɵɵtext(2);
             i0.ɵɵelementEnd();
@@ -1160,18 +1161,18 @@ class DropdownTreeviewComponent {
             i0.ɵɵlistener("selectedChange", function DropdownTreeviewComponent_Template_ngx_treeview_selectedChange_5_listener($event) { return ctx.onSelectedChange($event); })("filterChange", function DropdownTreeviewComponent_Template_ngx_treeview_filterChange_5_listener($event) { return ctx.onFilterChange($event); });
             i0.ɵɵelementEnd()()()();
         } if (rf & 2) {
-            i0.ɵɵadvance(1);
+            i0.ɵɵadvance();
             i0.ɵɵproperty("ngClass", ctx.buttonClass);
-            i0.ɵɵadvance(1);
+            i0.ɵɵadvance();
             i0.ɵɵtextInterpolate1(" ", ctx.buttonLabel, " ");
             i0.ɵɵadvance(3);
             i0.ɵɵproperty("config", ctx.config)("headerTemplate", ctx.headerTemplate)("items", ctx.items)("itemTemplate", ctx.itemTemplate);
         } }, dependencies: [i5.NgClass, TreeviewComponent, DropdownDirective, DropdownMenuDirective, DropdownToggleDirective], styles: [".dropdown[_ngcontent-%COMP%]{width:100%;display:inline-block}.dropdown[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{width:100%;margin-right:.9rem;text-align:left;overflow:hidden;padding-right:30px;text-overflow:ellipsis}.dropdown[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:after{position:absolute;right:.6rem;margin-top:.6rem}.dropdown[_ngcontent-%COMP%]   .dropdown-menu[_ngcontent-%COMP%]   .dropdown-container[_ngcontent-%COMP%]{padding:0 .6rem}"] });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DropdownTreeviewComponent, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DropdownTreeviewComponent, [{
         type: Component,
         args: [{ selector: 'ngx-dropdown-treeview', template: "<div class=\"dropdown\" ngxDropdown>\n  <button class=\"btn\" [ngClass]=\"buttonClass\" type=\"button\" role=\"button\" ngxDropdownToggle>\n    {{buttonLabel}}\n  </button>\n  <div ngxDropdownMenu aria-labelledby=\"dropdownMenu\" (click)=\"$event.stopPropagation()\">\n    <div class=\"dropdown-container\">\n      <ngx-treeview [config]=\"config\" [headerTemplate]=\"headerTemplate\" [items]=\"items\" [itemTemplate]=\"itemTemplate\"\n        (selectedChange)=\"onSelectedChange($event)\" (filterChange)=\"onFilterChange($event)\">\n      </ngx-treeview>\n    </div>\n  </div>\n</div>\n", styles: [".dropdown{width:100%;display:inline-block}.dropdown button{width:100%;margin-right:.9rem;text-align:left;overflow:hidden;padding-right:30px;text-overflow:ellipsis}.dropdown button:after{position:absolute;right:.6rem;margin-top:.6rem}.dropdown .dropdown-menu .dropdown-container{padding:0 .6rem}\n"] }]
-    }], function () { return [{ type: TreeviewI18n }, { type: TreeviewConfig }]; }, { buttonClass: [{
+    }], () => [{ type: TreeviewI18n }, { type: TreeviewConfig }], { buttonClass: [{
             type: Input
         }], headerTemplate: [{
             type: Input
@@ -1189,6 +1190,7 @@ class DropdownTreeviewComponent {
             type: ViewChild,
             args: [TreeviewComponent, { static: false }]
         }] }); })();
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(DropdownTreeviewComponent, { className: "DropdownTreeviewComponent" }); })();
 
 class TreeviewPipe {
     transform(objects, textField) {
@@ -1200,7 +1202,7 @@ class TreeviewPipe {
     static ɵfac = function TreeviewPipe_Factory(t) { return new (t || TreeviewPipe)(); };
     static ɵpipe = /*@__PURE__*/ i0.ɵɵdefinePipe({ name: "ngxTreeview", type: TreeviewPipe, pure: true });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewPipe, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewPipe, [{
         type: Pipe,
         args: [{
                 name: 'ngxTreeview'
@@ -1223,7 +1225,7 @@ class TreeviewModule {
     static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [FormsModule,
             CommonModule] });
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewModule, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeviewModule, [{
         type: NgModule,
         args: [{
                 imports: [
