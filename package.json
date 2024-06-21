@@ -37,29 +37,29 @@
     "url": "https://github.com/dbonicelli-oa/ngx-treeview/issues"
   },
   "dependencies": {
-    "@angular/animations": "17.3.4",
-    "@angular/common": "17.3.4",
-    "@angular/compiler": "17.3.4",
-    "@angular/core": "17.3.4",
-    "@angular/forms": "17.3.4",
-    "@angular/platform-browser": "17.3.4",
-    "@angular/platform-browser-dynamic": "17.3.4",
-    "@angular/router": "17.3.4",
+    "@angular/animations": "18.0.2",
+    "@angular/common": "18.0.2",
+    "@angular/compiler": "18.0.2",
+    "@angular/core": "18.0.2",
+    "@angular/forms": "18.0.2",
+    "@angular/platform-browser": "18.0.2",
+    "@angular/platform-browser-dynamic": "18.0.2",
+    "@angular/router": "18.0.2",
     "bootstrap": "^4.5.0",
     "lodash": "^4.17.15",
-    "rxjs": "~7.8.0",
+    "rxjs": "~7.8.1",
     "tslib": "^2.6.2",
-    "zone.js": "~0.14.3"
+    "zone.js": "~0.14.6"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~17.3.4",
-    "@angular/cli": "~17.3.4",
-    "@angular/compiler-cli": "~17.3.4",
+    "@angular-devkit/build-angular": "18.0.2",
+    "@angular/cli": "18.0.2",
+    "@angular/compiler-cli": "18.0.2",
     "@types/jasmine": "~4.0.3",
     "@types/jasminewd2": "2.0.10",
     "@types/lodash": "^4.14.157",
     "@types/node": "^16.18.61",
-    "codelyzer": "^6.0.0",
+    "codelyzer": "^6.0.2",
     "gh-pages": "^3.1.0",
     "jasmine-core": "~4.6.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -70,8 +70,8 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "protractor": "~7.0.0",
     "ts-node": "~10.9.1",
-    "tslint": "~6.1.0",
-    "typescript": "~5.4.2",
-    "ng-packagr": "^17.3.0"
+    "tslint": "~6.1.3",
+    "typescript": "~5.4.5",
+    "ng-packagr": "^18.0.0"
   }
 }

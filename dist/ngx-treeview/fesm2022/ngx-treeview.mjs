@@ -49,7 +49,7 @@ class DropdownDirective {
             i0.ɵɵlistener("keyup.esc", function DropdownDirective_keyup_esc_HostBindingHandler() { return ctx.onKeyupEsc(); })("click", function DropdownDirective_click_HostBindingHandler($event) { return ctx.onDocumentClick($event); }, false, i0.ɵɵresolveDocument);
         } if (rf & 2) {
             i0.ɵɵclassProp("show", ctx.isOpen);
-        } }, inputs: { internalOpen: [i0.ɵɵInputFlags.None, "open", "internalOpen"] }, outputs: { openChange: "openChange" }, exportAs: ["ngxDropdown"] });
+        } }, inputs: { internalOpen: [0, "open", "internalOpen"] }, outputs: { openChange: "openChange" }, exportAs: ["ngxDropdown"] });
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DropdownDirective, [{
         type: Directive,
